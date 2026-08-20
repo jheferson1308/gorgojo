@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GARAJE 2O — Lavado y detailing premium a domicilio. Tu auto en perfecto estado sin moverte de casa.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="GARAJE 2O — Lavado y Detailing Premium a Domicilio">
+  <meta property="og:description" content="Servicio premium de lavado y detailing vehicular a domicilio. Calidad profesional, comodidad total.">
+  <meta property="og:image" content="carro.jpg">
+  <title>GARAJE 2O — Lavado y Detailing Premium</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "GARAJE 2O",
+    "description": "Lavado y detailing premium a domicilio",
+    "telephone": "",
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__content">
+      <div class="preloader__logo">
+        <span class="logo__white">GARAJE</span><span class="logo__gold">2O</span>
+      </div>
+      <div class="preloader__bar">
+        <div class="preloader__bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="custom-cursor" id="customCursor">
+    <div class="custom-cursor__dot"></div>
+    <div class="custom-cursor__ring"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="nav" id="navbar">
+    <div class="nav__container">
+      <a href="#" class="nav__logo">
+        <span class="logo__white">GARAJE</span><span class="logo__gold">2O</span>
+      </a>
+      <div class="nav__links" id="navLinks">
+        <a href="#inicio" class="nav__link">INICIO</a>
+        <a href="#servicios" class="nav__link">SERVICIOS</a>
+        <a href="#planes" class="nav__link">PLANES</a>
+        <a href="#galeria" class="nav__link">GALERÍA</a>
+        <a href="#contacto" class="nav__link">CONTACTO</a>
+      </div>
+      <a href="#contacto" class="btn btn--primary nav__cta">RESERVAR AHORA</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <p class="hero__tag">LAVADO &amp; DETAILING PREMIUM</p>
+      <h1 class="hero__title" aria-label="Tu auto en perfecto estado sin moverte de casa">
+        <span class="hero__title-line"><span class="hero__word">TU</span> <span class="hero__word">AUTO</span> <span class="hero__word">EN</span> <span class="hero__word">PERFECTO</span> <span class="hero__word">ESTADO</span></span>
+        <span class="hero__title-line hero__title--gold"><span class="hero__word">SIN</span> <span class="hero__word">MOVERTE</span> <span class="hero__word">DE</span> <span class="hero__word">CASA</span></span>
+      </h1>
+      <p class="hero__sub">Calidad profesional. Comodidad total. Resultados que se notan.</p>
+      <div class="hero__btns">
+        <a href="#planes" class="btn btn--primary btn--large">VER PLANES</a>
+        <a href="#servicios" class="btn btn--outline btn--large">NUESTROS SERVICIOS</a>
+      </div>
+    </div>
+    <div class="hero__scroll" id="heroScrollIndicator" aria-hidden="true">
+      <span class="hero__scroll-text">SCROLL</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="about" id="sobre-nosotros">
+    <!-- Decorative background elements -->
+    <div class="about__bg-lines" aria-hidden="true">
+      <div class="about__bg-line"></div>
+      <div class="about__bg-line"></div>
+      <div class="about__bg-circle"></div>
+    </div>
+
+    <div class="about__main container">
+      <!-- Left: Image -->
+      <div class="about__image-wrap" data-reveal="fade-left">
+        <div class="about__image">
+          <video class="about__video" autoplay muted loop playsinline poster="carro.jpg">
+            <source src="somos.mp4" type="video/mp4">
+          </video>
+          <div class="about__image-overlay"></div>
+        </div>
+        <div class="about__image-glow"></div>
+      </div>
+
+      <!-- Right: Content -->
+      <div class="about__content" data-reveal="fade-right">
+        <div class="about__header">
+          <p class="section__tag">QUIENES SOMOS</p>
+          <h2 class="about__title">SOBRE <span class="gold">GARAJE 2O</span></h2>
+          <div class="about__gold-line"></div>
+        </div>
+
+        <p class="about__featured">NO SOLO LAVAMOS TU AUTO. <span class="gold">RESTAURAMOS SU PRESENCIA.</span></p>
+
+        <div class="about__text">
+          <p>GARAJE 2O es un servicio especializado en limpieza detallada automotriz. Formamos parte de la familia Iqueña desde hace más de 1 año.
+</p>
+          <p>Somos un equipo especializado y orientado para entregarte el mejor servicio de lavado y detallado en la puerta de tu casa o en el lugar que te encuentres y nuestro objetivo es poder brindarte la mejor asesoría y resultados de calidad para tu vehículo.
+</p>
+          <p>Recuerda que cada servicio es tratado con la máxima atención al detalle, utilizando productos de primera calidad y técnicas que protegen y realzan la apariencia de tu vehículo.</p>
+        </div>
+
+        <a href="#servicios" class="btn btn--primary about__cta">CONOCE NUESTROS SERVICIOS <span class="about__cta-arrow">→</span></a>
+      </div>
+    </div>
+
+    <!-- Stats row -->
+    <div class="about__stats-row container" data-reveal data-stagger>
+      <div class="about__stat-card">
+        <div class="about__stat-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="14" r="8"/><path d="M8 42c0-8.8 7.2-16 16-16s16 7.2 16 16"/><circle cx="38" cy="18" r="5"/><path d="M42 42c0-5.5-3.6-10-8-10"/><circle cx="10" cy="18" r="5"/><path d="M6 42c0-5.5 3.6-10 8-10"/></svg>
+        </div>
+        <div class="about__stat-value">
+          <span class="about__stat-number" data-count="100">0</span><span class="about__stat-suffix">+</span>
+        </div>
+        <p class="about__stat-label">CLIENTES SATISFECHOS</p>
+      </div>
+      <div class="about__stat-card">
+        <div class="about__stat-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="24" r="18"/><path d="M24 12v12l8 6"/><path d="M24 6v2M42 24h-2M24 42v-2M6 24h2"/></svg>
+        </div>
+        <div class="about__stat-value">
+          <span class="about__stat-number" data-count="1">0</span><span class="about__stat-suffix">+</span>
+        </div>
+        <p class="about__stat-label">AÑOS DE EXPERIENCIA</p>
+      </div>
+      <div class="about__stat-card">
+        <div class="about__stat-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 4L6 12v12c0 10 8 18 18 20 10-2 18-10 18-20V12L24 4z"/><path d="M16 24l6 6 10-12"/></svg>
+        </div>
+        <div class="about__stat-value">
+          <span class="about__stat-number" data-count="100">0</span><span class="about__stat-suffix">%</span>
+        </div>
+        <p class="about__stat-label">GARANTÍA DE CALIDAD</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES ==================== -->
+  <section class="services" id="servicios">
+    <div class="section__header">
+      <p class="section__tag">LO QUE HACEMOS</p>
+      <h2 class="section__title">NUESTROS <span class="gold">SERVICIOS</span></h2>
+    </div>
+    <div class="services__grid container">
+      <div class="services__item">
+        <div class="services__icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="32" cy="32" r="20"/>
+            <path d="M32 12V8M32 56v-4M12 32H8M56 32h-4"/>
+            <circle cx="32" cy="32" r="8"/>
+          </svg>
+        </div>
+        <h3 class="services__name">LAVADO EXTERIOR</h3>
+        <p class="services__desc">Lavado completo con productos de alta calidad que protegen la pintura de tu vehículo.</p>
+      </div>
+      <div class="services__item">
+        <div class="services__icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="12" y="20" width="40" height="24" rx="4"/>
+            <path d="M20 20v-4a12 12 0 0124 0v4"/>
+            <circle cx="32" cy="32" r="4"/>
+          </svg>
+        </div>
+        <h3 class="services__name">INTERIOR COMPLETO</h3>
+        <p class="services__desc">Aspirado, limpieza de tapizados, paneles y vidrios interiores con detail level.</p>
+      </div>
+      <div class="services__item">
+        <div class="services__icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M16 48l8-32h16l8 32"/>
+            <path d="M12 48h40"/>
+            <path d="M28 24l4-12 4 12"/>
+          </svg>
+        </div>
+        <h3 class="services__name">DETAILING PROFESIONAL</h3>
+        <p class="services__desc">Descontaminación, brillo y protección para tu vehículo.
+        Incluye cera cerámica con carnaúba y protección de vidrios.</p>
+      </div>
+      <div class="services__item">
+        <div class="services__icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M8 32a24 24 0 1048 0 24 24 0 10-48 0"/>
+            <path d="M32 16v16l12 8"/>
+          </svg>
+        </div>
+        <h3 class="services__name">A DOMICILIO</h3>
+        <p class="services__desc">Vamos a donde estés. Sin filas, sin traslados, sin perder tu tiempo.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== PLANES AUTOS ==================== -->
+  <section class="plans" id="planes">
+    <div class="section__header">
+      <p class="section__tag">ELIGE TU PLAN</p>
+      <h2 class="section__title">PLANES <span class="gold">PREMIUM</span></h2>
+    </div>
+    <div class="plans__grid container">
+
+      <!-- PLAN ESTÁNDAR -->
+      <div class="pv-card">
+        <div class="pv-card__bg">
+          <video class="pv-card__video" autoplay muted loop playsinline preload="metadata" poster="basico-poster.webp">
+            <source src="basico.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="pv-card__overlay"></div>
+        <div class="pv-card__content">
+          <div class="pv-card__head">
+            <h3 class="pv-card__name">ESTÁNDAR</h3>
+            <p class="pv-card__sub">El esencial para tu día a día</p>
+          </div>
+          <div class="pv-card__selector">
+            <button class="pv-selector__btn active" data-vehicle="sedan" data-plan="basico">AUTO / SEDÁN</button>
+            <button class="pv-selector__btn" data-vehicle="suv" data-plan="basico">SUV / CAMIONETA</button>
+          </div>
+          <div class="pv-card__prices">
+            <div class="pv-card__price active" data-vehicle="sedan">
+              <span class="pv-card__amount">S/60</span>
+            </div>
+            <div class="pv-card__price" data-vehicle="suv">
+              <span class="pv-card__amount">S/70</span>
+            </div>
+          </div>
+          <ul class="pv-card__list">
+            <li class="pv-card__li"><span class="pv-card__check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Lavado exterior completo</li>
+            <li class="pv-card__li"><span class="pv-card__check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Aspirado interior</li>
+            <li class="pv-card__li"><span class="pv-card__check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Limpieza de vidrios</li>
+            <li class="pv-card__li"><span class="pv-card__check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Plásticos externos</li>
+          </ul>
+           <a class="pv-card__btn btn btn--outline btn--full" data-plan="ESTÁNDAR" href="#contacto" onclick="return selectPlan(this)">
+            ELEGIR ESTE PLAN
+          </a>
+        </div>
+      </div>
+
+      <!-- PLAN PREMIUM -->
+      <div class="pv-card pv-card--featured">
+        <div class="pv-card__badge">MÁS POPULAR</div>
+        <div class="pv-card__bg">
+          <video class="pv-card__video" autoplay muted loop playsinline preload="metadata" poster="premium-poster.webp">
+            <source src="panda.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="pv-card__overlay"></div>
+        <div class="pv-card__content">
+          <div class="pv-card__head">
+            <h3 class="pv-card__name">PREMIUM</h3>
+            <p class="pv-card__sub">La experiencia completa GARAJE 2O</p>
+          </div>
+          <div class="pv-card__selector">
+            <button class="pv-selector__btn active" data-vehicle="sedan" data-plan="premium">AUTO / SEDÁN</button>
+            <button class="pv-selector__btn" data-vehicle="suv" data-plan="premium">SUV / CAMIONETA</button>
+          </div>
+          <div class="pv-card__prices">
+            <div class="pv-card__price active" data-vehicle="sedan">
+              <span class="pv-card__amount">S/110</span>
+            </div>
+            <div class="pv-card__price" data-vehicle="suv">
+              <span class="pv-card__amount">S/130</span>
+            </div>
+          </div>
+          <ul class="pv-card__list">
+            <li class="pv-card__li"><span class="pv-card__check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Lavado exterior premium</li>
+            <li class="pv-card__li"><span class="pv-card__check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Detailing interior completo</li>
+            <li class="pv-card__li"><span class="pv-card__check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Acondicionador de cuero</li>
+            <li class="pv-card__li"><span class="pv-card__check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Cera de protección</li>
+            <li class="pv-card__li"><span class="pv-card__check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Descontaminación de pintura</li>
+          </ul>
+          <a class="pv-card__btn btn btn--primary btn--full" data-plan="PREMIUM" href="#contacto" onclick="return selectPlan(this)">
+            ELEGIR ESTE PLAN
+          </a>
+        </div>
+      </div>
+
+      <!-- PLAN DETAILING -->
+      <div class="pv-card pv-card--star">
+        <div class="pv-card__bg">
+          <video class="pv-card__video" autoplay muted loop playsinline preload="metadata" poster="detailing-poster.webp">
+           <source src="garage.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="pv-card__overlay"></div>
+        <div class="pv-card__content">
+          <div class="pv-card__head">
+            <h3 class="pv-card__name">GARAJE 2O</h3>
+            <p class="pv-card__sub">Máximo cuidado y protección para tu vehículo.</p>
+          </div>
+          <div class="pv-card__selector">
+            <button class="pv-selector__btn active" data-vehicle="sedan" data-plan="detailing">AUTO / SEDÁN</button>
+            <button class="pv-selector__btn" data-vehicle="suv" data-plan="detailing">SUV / CAMIONETA</button>
+          </div>
+          <div class="pv-card__prices">
+            <div class="pv-card__price active" data-vehicle="sedan">
+              <span class="pv-card__amount">S/160</span>
+            </div>
+            <div class="pv-card__price" data-vehicle="suv">
+              <span class="pv-card__amount">S/190</span>
+            </div>
+          </div>
+          <ul class="pv-card__list">
+            <li class="pv-card__li"><span class="pv-card__check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Todo lo del plan Premium</li>
+            <li class="pv-card__li"><span class="pv-card__check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Lavado de motor</li>
+            <li class="pv-card__li"><span class="pv-card__check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Protección de vidrio</li>
+            <li class="pv-card__li"><span class="pv-card__check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Protección UV avanzada</li>
+            <li class="pv-card__li"><span class="pv-card__check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Tratamiento de llantas</li>
+          </ul>
+          <a class="pv-card__btn btn btn--outline btn--full" data-plan="DETAILING" href="#contacto" onclick="return selectPlan(this)">
+            ELEGIR ESTE PLAN
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ¿NO SABES QUÉ PLAN ELEGIR? -->
+    <div class="recommender__inner container">
+      <div class="section__header">
+        <p class="section__tag">¿NO SABES QUÉ PLAN ELEGIR?</p>
+        <h2 class="section__title">TE <span class="gold">RECOMENDAMOS</span></h2>
+      </div>
+      <div class="recommender__quiz" id="quizContainer">
+        <div class="recommender__progress">
+          <div class="recommender__progress-fill" id="quizProgress"></div>
+        </div>
+        <div class="recommender__step active" data-quiz-step="1">
+          <p class="recommender__question">¿Qué tipo de vehículo tienes?</p>
+          <div class="recommender__options">
+            <button class="recommender__option" data-q1="sedan">Auto / Sedán</button>
+            <button class="recommender__option" data-q1="suv">SUV / Camioneta</button>
+          </div>
+        </div>
+        <div class="recommender__step" data-quiz-step="2">
+          <p class="recommender__question">¿Cuál es tu prioridad?</p>
+          <div class="recommender__options">
+            <button class="recommender__option" data-q2="basico">Solo mantener limpio</button>
+            <button class="recommender__option" data-q2="premium">Limpiar + proteger</button>
+            <button class="recommender__option" data-q2="detailing">Restaurar y proteger a largo plazo</button>
+          </div>
+        </div>
+        <div class="recommender__step" data-quiz-step="3">
+          <p class="recommender__question">¿Con qué frecuencia lavas tu auto?</p>
+          <div class="recommender__options">
+            <button class="recommender__option" data-q3="rare">Una vez al mes o menos</button>
+            <button class="recommender__option" data-q3="normal">Cada 2 semanas</button>
+            <button class="recommender__option" data-q3="frequent">Semanal o más</button>
+          </div>
+        </div>
+        <div class="recommender__result" id="quizResult" style="display:none;">
+          <div class="recommender__result-plan" id="quizResultPlan"></div>
+          <p class="recommender__result-desc" id="quizResultDesc"></p>
+          <a class="btn btn--primary btn--large" id="quizResultBtn" href="#planes">VER PLAN</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPARADOR -->
+    <div class="comparator__wrap container" style="margin-top:4rem;">
+      <div class="section__header">
+        <p class="section__tag">COMPARA LOS PLANES</p>
+        <h2 class="section__title">¿QUÉ <span class="gold">INCLUYE</span> CADA PLAN?</h2>
+      </div>
+      <div class="comparator__scroll">
+        <table class="comparator__table">
+          <thead>
+            <tr>
+              <th class="comparator__feature-col">SERVICIO</th>
+              <th>ESTÁNDAR</th>
+              <th class="comparator__highlight">PREMIUM</th>
+              <th>GARAJE 2O</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr><td>Lavado exterior a mano</td><td><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td class="comparator__highlight"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
+            <tr><td>Shampoo premium pH neutro</td><td><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td class="comparator__highlight"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
+            <tr><td>Secado con toallas de microfibra</td><td><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td class="comparator__highlight"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
+            <tr><td>Limpieza de vidrios exteriores</td><td><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td class="comparator__highlight"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
+            <tr><td>Plásticos y molduras externas</td><td><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td class="comparator__highlight"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
+            <tr><td>Aspirado de interior completo</td><td><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td class="comparator__highlight"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
+            <tr><td>Pre lavado</td><td><svg class="comparator__icon-off" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="18" y2="12"/></svg></td><td class="comparator__highlight"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
+            <tr><td>Limpieza de panel de instrumentos</td><td><svg class="comparator__icon-off" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="18" y2="12"/></svg></td><td class="comparator__highlight"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
+            <tr><td>Acondicionador de cuero/vinilo</td><td><svg class="comparator__icon-off" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="18" y2="12"/></svg></td><td class="comparator__highlight"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
+            <tr><td>Lavado de motor</td><td><svg class="comparator__icon-off" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="18" y2="12"/></svg></td><td class="comparator__highlight"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
+            <tr><td>Descontaminación de pintura</td><td><svg class="comparator__icon-off" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="18" y2="12"/></svg></td><td class="comparator__highlight"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td><td><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
+            <tr><td>Revestimiento cerámico</td><td><svg class="comparator__icon-off" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="18" y2="12"/></svg></td><td class="comparator__highlight"><svg class="comparator__icon-off" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="18" y2="12"/></svg></td><td><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== PLANS MOTO ==================== -->
+  <section class="plans plans--moto" id="planes-moto">
+    <div class="section__header" data-reveal="header">
+      <p class="section__tag"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h3l2 4h1"/><path d="M5.5 14l3-8h5l3 4"/><path d="M10 6v4"/><path d="M16.5 14l-3-8"/></svg> MOTOCICLETAS</p>
+      <h2 class="section__title">GARAJE <span class="gold">MOTOS</span></h2>
+      <p class="section__subtitle">Cuidado profesional especializado para tu motocicleta.</p>
+    </div>
+    <div class="moto-single container" data-reveal>
+      <div class="moto-single__card">
+        <video class="moto-single__video" autoplay loop muted playsinline>
+          <source src="moto.mp4" type="video/mp4">
+        </video>
+        <div class="moto-single__bg"></div>
+        <div class="moto-single__overlay"></div>
+        <div class="moto-single__content">
+          <div class="moto-single__icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h3l2 4h1"/><path d="M5.5 14l3-8h5l3 4"/><path d="M10 6v4"/><path d="M16.5 14l-3-8"/></svg></div>
+          <h3 class="moto-single__title">SERVICIO DE DETAILING PARA MOTOS</h3>
+          <p class="moto-single__desc">Servicio profesional de limpieza y detailing para motocicletas.</p>
+          <div class="moto-single__price">DESDE S/35</div>
+          <p class="moto-single__note">El precio final se cotiza según el tipo, tamaño y estado de la motocicleta.</p>
+          <ul class="moto-single__list">
+            <li class="moto-single__li"><span class="moto-single__check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Lavado y descontaminación exterior</li>
+            <li class="moto-single__li"><span class="moto-single__check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Limpieza de partes plásticas y cromadas</li>
+            <li class="moto-single__li"><span class="moto-single__check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Tratamiento de cadena y componentes</li>
+            <li class="moto-single__li"><span class="moto-single__check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Protección UV y cera de brillo</li>
+          </ul>
+          <a class="moto-single__btn btn btn--primary btn--full" href="#" onclick="return openMotoReserve()">
+            COTIZAR / RESERVAR
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ADICIONALES ==================== -->
+  <section class="addons" id="adicionales">
+    <div class="section__header" data-reveal="header">
+      <p class="section__tag">ADICIONALES</p>
+      <h2 class="section__title">POTENCIA TU <span class="gold">SERVICIO</span></h2>
+      <p class="section__subtitle">Tratamientos y cuidados extra para tu vehículo.</p>
+    </div>
+    <div class="addons__accordions container" data-reveal data-stagger>
+
+      <div class="addons__accordion open">
+        <button type="button" class="addons__accordion-header">
+          <span class="addons__accordion-title">PROTECCIÓN</span>
+          <svg class="addons__accordion-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="addons__accordion-body">
+          <div class="addons__accordion-grid">
+            <div class="addons__card" data-addon="Blend Spray Wax Black Hidrorrepelente" data-price="50" data-addon-id="addon-1">
+              <div class="addons__card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="18" y="18" width="12" height="24" rx="3"/><path d="M24 18V12"/><path d="M20 12h8"/><path d="M24 6l-1-3"/><path d="M20 8l-1-2"/><path d="M28 8l1-2"/><path d="M10 34c0 0 3-6 6-2s4 2 6-2 3-6 6-2 4 2 6-2 3-6 6-2"/><path d="M10 38c0 0 3-6 6-2s4 2 6-2 3-6 6-2 4 2 6-2 3-6 6-2"/></svg></div>
+              <div class="addons__card-body"><h3 class="addons__card-name">Blend Spray Wax Black Hidrorrepelente</h3><p class="addons__card-desc">Cera líquida con SiO2 y Carnaúba, proporciona resistencia cerámica y brillo cálido. Duración: 4 meses.</p></div>
+              <div class="addons__card-footer"><span class="addons__card-price">S/50</span><button class="addons__card-btn btn btn--outline" type="button">+ AGREGAR</button></div>
+            </div>
+            <div class="addons__card" data-addon="Blend Spray Wax Clásica" data-price="35" data-addon-id="addon-2">
+              <div class="addons__card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 30h36"/><path d="M10 30l3-10h22l3 10"/><path d="M8 30v4a2 2 0 002 2h4a2 2 0 002-2v-2h16v2a2 2 0 002 2h4a2 2 0 002-2v-4"/><circle cx="14" cy="34" r="3"/><circle cx="34" cy="34" r="3"/><path d="M24 11v-4"/><path d="M20 13l-2-3"/><path d="M28 13l2-3"/></svg></div>
+              <div class="addons__card-body"><h3 class="addons__card-name">Blend Spray Wax Clásica</h3><p class="addons__card-desc">Cera líquida con SiO2 híbrida. Duración: 4 meses. Protección, brillo y repelencia al agua.</p></div>
+              <div class="addons__card-footer"><span class="addons__card-price">S/35</span><button class="addons__card-btn btn btn--outline" type="button">+ AGREGAR</button></div>
+            </div>
+            <div class="addons__card" data-addon="Native Cerámica Spray Wax" data-price="35" data-addon-id="addon-3">
+              <div class="addons__card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 30h36"/><path d="M10 30l3-10h22l3 10"/><path d="M8 30v4a2 2 0 002 2h4a2 2 0 002-2v-2h16v2a2 2 0 002 2h4a2 2 0 002-2v-4"/><circle cx="14" cy="34" r="3"/><circle cx="34" cy="34" r="3"/><path d="M20 6l4 5 4-5"/><path d="M24 11v-3"/><circle cx="38" cy="14" r="4" stroke-dasharray="2 2"/><path d="M36 12l4 4"/></svg></div>
+              <div class="addons__card-body"><h3 class="addons__card-name">Native Cerámica Spray Wax</h3><p class="addons__card-desc">Carnaúba ideal para mantener el brillo del vehículo. Duración: 4 meses.</p></div>
+              <div class="addons__card-footer"><span class="addons__card-price">S/35</span><button class="addons__card-btn btn btn--outline" type="button">+ AGREGAR</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="addons__accordion">
+        <button type="button" class="addons__accordion-header">
+          <span class="addons__accordion-title">RUEDAS</span>
+          <svg class="addons__accordion-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="addons__accordion-body">
+          <div class="addons__accordion-grid">
+            <div class="addons__card" data-addon="Descontaminación férrica de aros" data-price="35" data-addon-id="addon-4">
+              <div class="addons__card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="16"/><circle cx="24" cy="24" r="7"/><circle cx="24" cy="24" r="2.5"/><path d="M24 8v5M24 35v5M8 24h5M35 24h5"/><path d="M15 15l-2-2M35 35l-2-2M15 33l-2 2M35 13l-2 2"/><circle cx="33" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="14" cy="34" r="1.5" fill="currentColor" stroke="none"/></svg></div>
+              <div class="addons__card-body"><h3 class="addons__card-name">Descontaminación Férrica de Aros</h3><p class="addons__card-desc">Eliminación de partículas férricas y óxido</p></div>
+              <div class="addons__card-footer"><span class="addons__card-price">S/35</span><button class="addons__card-btn btn btn--outline" type="button">+ AGREGAR</button></div>
+            </div>
+            <div class="addons__card" data-addon="Sellador y restaurador neumáticos" data-price="50" data-addon-id="addon-5">
+              <div class="addons__card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="16"/><circle cx="24" cy="24" r="10"/><circle cx="24" cy="24" r="4"/><path d="M24 8v4M24 36v4M8 24h4M36 24h4"/><path d="M13 13l3 3M32 32l3 3M13 35l3-3M32 16l3-3"/></svg></div>
+              <div class="addons__card-body"><h3 class="addons__card-name">Sellador y Restaurador Neumáticos</h3><p class="addons__card-desc">Repele el agua, devuelve el color negro, protege rayos UV por 1 mes.</p></div>
+              <div class="addons__card-footer"><span class="addons__card-price">S/50</span><button class="addons__card-btn btn btn--outline" type="button">+ AGREGAR</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="addons__accordion">
+        <button type="button" class="addons__accordion-header">
+          <span class="addons__accordion-title">INTERIOR</span>
+          <svg class="addons__accordion-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="addons__accordion-body">
+          <div class="addons__accordion-grid">
+            <div class="addons__card" data-addon="Limpieza profunda de tapicería" data-price="65" data-addon-id="addon-6">
+              <div class="addons__card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 36V16c0-2 1-3 3-3h18c2 0 3 1 3 3v20"/><path d="M8 36h32"/><path d="M12 36v4h24v-4"/><path d="M16 28c2-3 5-5 8-5s6 2 8 5"/><path d="M24 13V9"/><path d="M20 11l-2-2"/><path d="M28 11l2-2"/><line x1="12" y1="24" x2="36" y2="24" stroke-dasharray="3 2"/></svg></div>
+              <div class="addons__card-body"><h3 class="addons__card-name">Limpieza Profunda de Tapicería</h3><p class="addons__card-desc">Higienización completa de asientos y superficies</p></div>
+              <div class="addons__card-footer"><span class="addons__card-price">S/65</span><button class="addons__card-btn btn btn--outline" type="button">+ AGREGAR</button></div>
+            </div>
+            <div class="addons__card" data-addon="Limpieza de alfombras" data-price="45" data-addon-id="addon-7">
+              <div class="addons__card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="14" width="36" height="24" rx="3"/><path d="M6 22h36M6 30h36"/><path d="M14 14v24M22 14v24M30 14v24"/><path d="M10 10l2 4M18 10l2 4M26 10l2 4M34 10l2 4"/></svg></div>
+              <div class="addons__card-body"><h3 class="addons__card-name">Limpieza de Alfombras</h3><p class="addons__card-desc">Lavado e higienización de alfombrillas</p></div>
+              <div class="addons__card-footer"><span class="addons__card-price">S/45</span><button class="addons__card-btn btn btn--outline" type="button">+ AGREGAR</button></div>
+            </div>
+            <div class="addons__card" data-addon="Limpieza de techo" data-price="40" data-addon-id="addon-8">
+              <div class="addons__card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 28h32"/><path d="M12 28l3-14h18l3 14"/><path d="M10 28v4a2 2 0 002 2h4a2 2 0 002-2v-1h16v1a2 2 0 002 2h4a2 2 0 002-2v-4"/><path d="M24 8l-1 6"/><path d="M20 10l-1 4"/><path d="M28 10l1 4"/><circle cx="24" cy="7" r="1.5" fill="currentColor" stroke="none"/></svg></div>
+              <div class="addons__card-body"><h3 class="addons__card-name">Limpieza de Techo</h3><p class="addons__card-desc">Limpieza del techo interior del vehículo</p></div>
+              <div class="addons__card-footer"><span class="addons__card-price">S/40</span><button class="addons__card-btn btn btn--outline" type="button">+ AGREGAR</button></div>
+            </div>
+            <div class="addons__card" data-addon="Limpieza profunda de maletera" data-price="25" data-addon-id="addon-9">
+              <div class="addons__card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 30h32"/><path d="M12 30l2-10h20l2 10"/><path d="M8 30v3a2 2 0 002 2h4a2 2 0 002-2v-1h20v1a2 2 0 002 2h4a2 2 0 002-2v-3"/><circle cx="14" cy="33" r="2.5"/><circle cx="34" cy="33" r="2.5"/><path d="M18 16h12"/><path d="M24 12v4"/><path d="M34 20l4-2"/><path d="M36 16l2 2"/></svg></div>
+              <div class="addons__card-body"><h3 class="addons__card-name">Limpieza Profunda de Maletera</h3><p class="addons__card-desc">Higienización completa del baúl</p></div>
+              <div class="addons__card-footer"><span class="addons__card-price">S/25</span><button class="addons__card-btn btn btn--outline" type="button">+ AGREGAR</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ADICIONALES SELECCIONADOS -->
+    <div class="addons__summary container" id="addonsSummary">
+      <p class="addons__summary-title">ADICIONALES SELECCIONADOS <span class="addons__summary-count" id="addonsSummaryCount"></span></p>
+      <div class="addons__summary-list" id="addonsSummaryList">
+        <p class="addons__summary-empty" id="addonsSummaryEmpty">No has seleccionado adicionales.</p>
+      </div>
+      <div class="addons__summary-total" id="addonsSummaryTotal" style="display:none;">
+        <span>SUBTOTAL:</span>
+        <span id="addonsSummaryPrice">S/0</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ==================== PRODUCTOS QUE USAMOS ==================== -->
+  <section class="productos" id="productos">
+    <div class="productos__inner container" data-reveal="fade-up">
+      <div class="section__header">
+        <p class="section__tag"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20"/></svg> PRODUCTOS QUE USAMOS</p>
+        <h2 class="section__title">PROFESIONALES <span class="gold">DE CALIDAD</span></h2>
+        <p class="section__subtitle">Utilizamos productos de las mejores marcas para garantizar resultados excepcionales.</p>
+      </div>
+      <div class="productos__grid">
+        <div class="productos__card">
+          <div class="productos__img-wrap">
+            <img src="producto1.jpg" alt="Producto 1" class="productos__img" loading="lazy">
+          </div>
+        </div>
+        <div class="productos__card">
+          <div class="productos__img-wrap">
+            <img src="producto2.jpg" alt="Producto 2" class="productos__img" loading="lazy">
+          </div>
+        </div>
+        <div class="productos__card">
+          <div class="productos__img-wrap">
+            <img src="producto3.jpg" alt="Producto 3" class="productos__img" loading="lazy">
+          </div>
+        </div>
+        <div class="productos__card">
+          <div class="productos__img-wrap">
+            <img src="producto4.jpg" alt="Producto 4" class="productos__img" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BEFORE/AFTER ==================== -->
+  <section class="before-after" id="antesdespues">
+    <div class="section__header">
+      <p class="section__tag">NUESTROS RESULTADOS</p>
+      <h2 class="section__title">ANTES <span class="gold">Y DESPUÉS</span></h2>
+    </div>
+    <div class="before-after__container container">
+  <div class="before-after__slider">
+
+    <div class="before-after__before">
+      <img class="before-after__img"
+           src="antes.jpg"
+           alt="Antes del servicio"
+           loading="lazy">
+      <span class="before-after__label before-after__label--before">ANTES</span>
+    </div>
+
+    <div class="before-after__after">
+      <img class="before-after__img"
+           src="despues.jpg"
+           alt="Después del servicio"
+           loading="lazy">
+      <span class="before-after__label before-after__label--after">DESPUÉS</span>
+    </div>
+
+    <div class="before-after__handle" id="baHandle">
+      <div class="before-after__line"></div>
+      <div class="before-after__circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 4l-6 8 6 8M16 4l6 8-6 8"/>
+        </svg>
+      </div>
+    </div>
+
+  </div>
+</div>
+  </section>
+
+  <!-- ==================== GALLERY ==================== -->
+  <section class="gallery" id="galeria">
+    <div class="section__header">
+      <p class="section__tag">NUESTRO TRABAJO</p>
+      <h2 class="section__title">GALERÍA <span class="gold">GARAJE 2O</span></h2>
+    </div>
+    <div class="gallery__grid container">
+      <div class="gallery__item gallery__item--large" data-gallery-index="0">
+        <img src="acabadoespejo.jpg"
+     alt="Acabado espejo en pintura-black después de detailing profesional GARAJE 2O"
+     class="gallery__img"
+     loading="lazy">
+        <div class="gallery__overlay">
+          <span class="gallery__tag">DETAILING</span>
+        </div>
+      </div>
+      <div class="gallery__item" data-gallery-index="1">
+        <img src="lavado.jpg"
+     alt="Lavado exterior completo a mano con shampoo premium GARAJE 2O"
+     class="gallery__img"
+     loading="lazy">
+        <div class="gallery__overlay">
+          <span class="gallery__tag">PREMIUM</span>
+        </div>
+      </div>
+      <div class="gallery__item" data-gallery-index="2">
+        <img src="carro.jpg"
+     alt="Interior de vehículo limpio y detallado por GARAJE 2O"
+     class="gallery__img"
+     loading="lazy">
+        <div class="gallery__overlay">
+          <span class="gallery__tag">INTERIOR</span>
+        </div>
+      </div>
+      <div class="gallery__item" data-gallery-index="3">
+        <img src="carrito.jpg"
+     alt="Vehículo compacto con acabado brillante tras servicio de detailing"
+     class="gallery__img"
+     loading="lazy">
+        <div class="gallery__overlay">
+          <span class="gallery__tag">PAINT CORRECTION</span>
+        </div>
+      </div>
+      
+      <div class="gallery__item" data-gallery-index="4">
+        <img src="tola.jpg"
+     alt="Resultado final de detailing completo con protección cerámica GARAJE 2O"
+     class="gallery__img"
+     loading="lazy">
+        <div class="gallery__overlay">
+          <span class="gallery__tag">RESULTADO</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Galería de imágenes" aria-hidden="true">
+    <button class="lightbox__close" aria-label="Cerrar galería">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" aria-label="Imagen anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 19l-7-7 7-7"/></svg>
+    </button>
+    <div class="lightbox__img-wrap">
+      <img class="lightbox__img" id="lightboxImg" src="" alt="Ampliación de galería">
+    </div>
+    <button class="lightbox__nav lightbox__nav--next" aria-label="Siguiente imagen">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+    <div class="lightbox__counter" id="lightboxCounter"></div>
+  </div>
+
+
+  <!-- ==================== LA DIFERENCIA GARAJE2O ==================== -->
+  <section class="why-us" id="la-diferencia">
+    <div class="section__header">
+      <p class="section__tag">LA DIFERENCIA GARAJE 2O</p>
+      <h2 class="section__title">¿POR QUÉ <span class="gold">ELEGIRNOS</span>?</h2>
+    </div>
+    <div class="why-us__grid container">
+      <div class="why-us__item">
+        <div class="why-us__icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="32" cy="32" r="24"/><path d="M20 32l8 8 16-16"/></svg>
+        </div>
+        <h3 class="why-us__title">PRODUCTOS PROFESIONALES</h3>
+        <p class="why-us__desc">Utilizamos únicamente productos de marcas reconocidas internacionalmente que protegen y realzan tu vehículo.</p>
+      </div>
+      <div class="why-us__item">
+        <div class="why-us__icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 48V20l16-8 16 8v28"/><path d="M24 48V32h16v16"/></svg>
+        </div>
+        <h3 class="why-us__title">EQUIPO ESPECIALIZADO</h3>
+        <p class="why-us__desc">Técnicos certificados con experiencia comprobada en detailing profesional y atención personalizada.</p>
+      </div>
+      <div class="why-us__item">
+        <div class="why-us__icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M32 8l8 16h16l-12 12 4 16-16-8-16 8 4-16L8 24h16z"/></svg>
+        </div>
+        <h3 class="why-us__title">ATENCIÓN AL DETALLE</h3>
+        <p class="why-us__desc">Cada servicio pasa por un proceso de control de calidad. Revisamos cada zona del vehículo antes de entregar.</p>
+      </div>
+      <div class="why-us__item">
+        <div class="why-us__icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="32" cy="32" r="24"/><path d="M20 32l8 8 16-16"/></svg>
+        </div>
+        <h3 class="why-us__title">CONTROL DE CALIDAD</h3>
+        <p class="why-us__desc">Inspección inicial, productos certificados, revisión final minuciosa y seguimiento post-servicio.</p>
+      </div>
+      <div class="why-us__item">
+        <div class="why-us__icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 32a24 24 0 1048 0 24 24 0 10-48 0"/><path d="M32 16v16l12 8"/></svg>
+        </div>
+        <h3 class="why-us__title">SERVICIO A DOMICILIO</h3>
+        <p class="why-us__desc">Vamos a donde estés. Sin filas, sin traslados, sin perder tu tiempo. Tu comodidad es nuestra prioridad.</p>
+      </div>
+      <div class="why-us__item">
+        <div class="why-us__icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 4L6 12v12c0 10 8 18 18 20 10-2 18-10 18-20V12L24 4z"/><path d="M16 24l6 6 10-12"/></svg>
+        </div>
+        <h3 class="why-us__title">GARANTÍA DE SERVICIO</h3>
+        <p class="why-us__desc">Garantía en cada servicio, aplicando las mejores técnicas y utilizando productos de alta calidad para brindarte resultados excepcionales.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ==================== SERVICIO A DOMICILIO ==================== -->
+  <section class="domicilio" id="domicilio">
+    <div class="domicilio__bg-number" aria-hidden="true">02</div>
+    <div class="domicilio__glow" aria-hidden="true"></div>
+    <div class="domicilio__inner container">
+      <div class="domicilio__content">
+        <p class="section__tag">VENIMOS A TI</p>
+        <h2 class="domicilio__title">SERVICIO A<br><span class="gold">DOMICILIO</span></h2>
+        <h3 class="domicilio__subtitle">TODO LISTO. TÚ SOLO PON EL LUGAR.</h3>
+        <p class="domicilio__desc">Llevamos equipos profesionales, productos premium y todo lo necesario para dejar tu auto impecable directamente en tu domicilio.</p>
+        <div class="domicilio__indicators">
+          <div class="domicilio__indicator">
+            <span class="domicilio__indicator-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </span>
+            <span class="domicilio__indicator-label">ATENCIÓN PERSONALIZADA</span>
+          </div>
+          <div class="domicilio__indicator">
+            <span class="domicilio__indicator-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </span>
+            <span class="domicilio__indicator-label">SERVICIO PROFESIONAL</span>
+          </div>
+          <div class="domicilio__indicator">
+            <span class="domicilio__indicator-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </span>
+            <span class="domicilio__indicator-label">GARANTÍA DE CALIDAD</span>
+          </div>
+        </div>
+      </div>
+      <div class="domicilio__visual">
+        <div class="domicilio__card">
+          <div class="domicilio__card-line" aria-hidden="true"></div>
+          <div class="domicilio__card-icon">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="22" height="12" rx="3"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M6 6V4a2 2 0 012-2h8a2 2 0 012 2v2"/><line x1="12" y1="10" x2="12" y2="14"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+          </div>
+          <p class="domicilio__card-title">DETAILING A DOMICILIO</p>
+          <p class="domicilio__card-text">Servicio profesional donde tú estés</p>
+          <div class="domicilio__card-features">
+            <span class="domicilio__card-feature">Equipo profesional</span>
+            <span class="domicilio__card-feature">Productos premium</span>
+            <span class="domicilio__card-feature">Resultados garantizados</span>
+          </div>
+          <div class="domicilio__card-badge">GARAJE 2O</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== FAQ ==================== -->
+  <section class="faq" id="faq">
+    <div class="section__header">
+      <p class="section__tag">PREGUNTAS FRECUENTES</p>
+      <h2 class="section__title">¿TIENES <span class="gold">DUDAS</span>?</h2>
+    </div>
+    <div class="faq__list container">
+      <div class="faq__item">
+        <button class="faq__question">
+          <span class="faq__question-text">¿EN QUÉ ZONAS BRINDAN SERVICIO?</span>
+          <span class="faq__icon"></span>
+        </button>
+        <div class="faq__answer">
+          <p class="faq__answer-inner">Actualmente brindamos servicio en Ica. Consulta por zonas específicas al reservar. Estamos en constante expansión.</p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question">
+          <span class="faq__question-text">¿CUÁNTO DURA UN SERVICIO?</span>
+          <span class="faq__icon"></span>
+        </button>
+        <div class="faq__answer">
+          <p class="faq__answer-inner">Depende del plan seleccionado: el plan Estándar toma entre 45-60 minutos, el Premium entre 90-120 minutos y el Garaje 20 entre 3-5 horas según el estado del vehículo.</p>
+        </div>
+      </div>
+     
+      <div class="faq__item">
+        <button class="faq__question">
+          <span class="faq__question-text">¿CÓMO PUEDO RESERVAR?</span>
+          <span class="faq__icon"></span>
+        </button>
+        <div class="faq__answer">
+          <p class="faq__answer-inner">Puedes reservar directamente desde nuestra página seleccionando el plan, o escribirnos por WhatsApp. Te confirmaremos la disponibilidad de inmediato.</p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question">
+          <span class="faq__question-text">¿OFRECEN GARANTÍA EN SUS SERVICIOS?</span>
+          <span class="faq__icon"></span>
+        </button>
+        <div class="faq__answer">
+          <p class="faq__answer-inner">Sí, todos nuestros servicios incluyen garantía de satisfacción. Si no quedas conforme con el resultado, regresamos y solucionamos sin costo adicional.</p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question">
+          <span class="faq__question-text">¿PUEDO MODIFICAR O CANCELAR MI RESERVA?</span>
+          <span class="faq__icon"></span>
+        </button>
+        <div class="faq__answer">
+          <p class="faq__answer-inner">Puedes modificar o cancelar tu reserva hasta 2 horas antes de la cita programada sin ningún costo. Escríbenos por WhatsApp y lo gestionamos al instante.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== CONTACTO / RESERVA ==================== -->
+  <section class="cta-final" id="contacto">
+    <div class="cta-final__watermark">GARAJE 2O</div>
+    <div class="cta-final__reflections">
+      <div class="cta-final__reflection-line"></div>
+      <div class="cta-final__reflection-line"></div>
+      <div class="cta-final__reflection-line"></div>
+    </div>
+    <div class="section__header">
+      <p class="section__tag">CONTACTO</p>
+      <h2 class="section__title">¿LISTO PARA CUIDAR TU <span class="gold">AUTO</span>?</h2>
+    </div>
+    <p class="cta-final__desc">Reserva tu servicio de forma rápida y directa.</p>
+    <div class="cta-final__hours">
+      <div class="cta-final__hours-row">
+        <span class="cta-final__hours-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </span>
+        <span class="cta-final__hours-label">HORARIO DE ATENCIÓN GARAJE 2O</span>
+      </div>
+      <div class="cta-final__hours-grid">
+        <div class="cta-final__hours-item">
+          <span class="cta-final__hours-days">Lunes a Viernes</span>
+          <span class="cta-final__hours-time">3:00 p. m. – 7:00 p. m.</span>
+        </div>
+        <div class="cta-final__hours-item">
+          <span class="cta-final__hours-days">Sábados y Domingos</span>
+          <span class="cta-final__hours-time">8:00 a. m. – 7:00 p. m.</span>
+        </div>
+      </div>
+    </div>
+    <div class="cta-final__actions">
+      <a href="#" class="btn btn--primary btn--xlarge" id="ctaReserveBtn">RESERVAR AHORA</a>
+    </div>
+  </section>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__top container">
+      <div class="footer__brand">
+        <a href="#" class="footer__logo" aria-label="GARAJE 2O — Ir al inicio">
+          <span class="logo__white">GARAJE</span><span class="logo__gold">2O</span>
+        </a>
+    <p class="footer__tagline">Lavado y detailing premium a domicilio. Tu tiempo vale, tu auto también.</p>
+    <div class="footer__social">
+      <a href="https://www.tiktok.com/@garaje20.detail?_r=1&_t=ZS-992kLyRmFnB" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.2a6.34 6.34 0 0 0 10.86 4.46V13.2a8.16 8.16 0 0 0 5.58 2.18v-3.45a4.85 4.85 0 0 1-3.77-1.57V6.69h3.77z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/share/19cYTGSRX5/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/garaje20.detail?igsi=NDZpMXd6dXJ1aXY=" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </a>
+    </div>
+    <a href="#contacto" class="btn btn--outline footer__cta">AGENDAR SERVICIO</a>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4 class="footer__col-title">NAVEGACIÓN</h4>
+          <a href="#inicio">INICIO</a>
+          <a href="#servicios">SERVICIOS</a>
+          <a href="#planes">PLANES</a>
+          <a href="#la-diferencia">LA DIFERENCIA</a>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">MÁS</h4>
+          <a href="#galeria">GALERÍA</a>
+          <a href="#faq">PREGUNTAS</a>
+          <a href="#sobre-nosotros">SOBRE NOSOTROS</a>
+          <a href="#contacto">CONTACTO</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>&copy; 2025 GARAJE 2O. Todos los derechos reservados.                                                     Desarrollado por Deltasay</p>
+    </div>
+  </footer>
+
+  <!-- ==================== QUICK RESERVE MODAL ==================== -->
+  <div class="qmodal" id="quickReserveModal">
+    <div class="qmodal__overlay" id="quickReserveOverlay"></div>
+    <div class="qmodal__box">
+      <button class="qmodal__close" id="quickReserveClose" type="button">&times;</button>
+      <div class="qmodal__head">
+        <p class="qmodal__tag">RESERVA</p>
+        <h3 class="qmodal__title">RESUMEN DE TU RESERVA</h3>
+      </div>
+      <div class="qmodal__body" id="quickReserveBody">
+        <div class="qmodal__vehicle-section">
+          <label class="qmodal__label">¿QUÉ TIPO DE VEHÍCULO TIENES?</label>
+          <div class="qmodal__vehicle-grid" id="qmodalVehicleGrid">
+            <button type="button" class="qmodal__vehicle-card" data-vehicle="sedan">
+              <span class="qmodal__vehicle-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14"/><path d="M5 17a2 2 0 0 1-2-2v-3l2-5h14l2 5v3a2 2 0 0 1-2 2"/><path d="M5 17a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg></span>
+              <span class="qmodal__vehicle-name">SEDÁN / HATCHBACK</span>
+            </button>
+            <button type="button" class="qmodal__vehicle-card" data-vehicle="suv">
+              <span class="qmodal__vehicle-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17h16"/><path d="M4 17a2 2 0 0 1-2-2v-4l2-4h4l2 2h6l2-2h4l2 4v4a2 2 0 0 1-2 2"/><path d="M4 17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2"/><circle cx="7" cy="17" r="1.5"/><circle cx="17" cy="17" r="1.5"/></svg></span>
+              <span class="qmodal__vehicle-name">SUV / CAMIONETA</span>
+            </button>
+            <button type="button" class="qmodal__vehicle-card qmodal__vehicle-card--hidden" data-vehicle="moto" id="qmodalVehicleMoto">
+              <span class="qmodal__vehicle-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h3l2 4h1"/><path d="M5.5 14l3-8h5l3 4"/><path d="M10 6v4"/><path d="M16.5 14l-3-8"/></svg></span>
+              <span class="qmodal__vehicle-name">MOTOCICLETA</span>
+            </button>
+          </div>
+        </div>
+        <div class="qmodal__divider"></div>
+        <div class="qmodal__plan-section">
+          <label class="qmodal__label">ELIGE TU PLAN</label>
+          <p class="qmodal__vehicle-badge" id="qmodalVehicleBadge"></p>
+          <div class="qmodal__plan-grid" id="qmodalPlanGrid">
+            <button type="button" id="qmodalPlanCard1" class="qmodal__plan-card" data-plan="basico" disabled>
+              <span class="qmodal__plan-type" id="qmodalPlanType1"></span>
+              <span class="qmodal__plan-name">PLAN ESTÁNDAR</span>
+              <span class="qmodal__plan-price" id="qmodalPlanPrice1">S/--</span>
+            </button>
+            <button type="button" id="qmodalPlanCard2" class="qmodal__plan-card" data-plan="premium" disabled>
+              <span class="qmodal__plan-type" id="qmodalPlanType2"></span>
+              <span class="qmodal__plan-name">PLAN PREMIUM</span>
+              <span class="qmodal__plan-price" id="qmodalPlanPrice2">S/--</span>
+            </button>
+            <button type="button" id="qmodalPlanCard3" class="qmodal__plan-card" data-plan="detailing" disabled>
+              <span class="qmodal__plan-type" id="qmodalPlanType3"></span>
+              <span class="qmodal__plan-name">PLAN GARAJE 2O</span>
+              <span class="qmodal__plan-price" id="qmodalPlanPrice3">S/--</span>
+            </button>
+          </div>
+          <!-- MOTO SERVICE INFO (hidden by default) -->
+          <div class="qmodal__moto-info" id="qmodalMotoInfo" style="display:none;">
+            <div class="qmodal__moto-info-header">
+              <span class="qmodal__moto-info-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h3l2 4h1"/><path d="M5.5 14l3-8h5l3 4"/><path d="M10 6v4"/><path d="M16.5 14l-3-8"/></svg></span>
+              <div>
+                <p class="qmodal__moto-info-title">SERVICIO DE DETAILING PARA MOTOCICLETAS</p>
+                <p class="qmodal__moto-info-price">DESDE S/35</p>
+              </div>
+            </div>
+            <p class="qmodal__moto-info-note">El precio final se cotiza según la motocicleta y el servicio.</p>
+            <ul class="qmodal__moto-info-list">
+              <li><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Lavado y descontaminación exterior</li>
+              <li><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Limpieza de partes plásticas y cromadas</li>
+              <li><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Tratamiento de cadena y componentes</li>
+              <li><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Protección UV y cera de brillo</li>
+            </ul>
+            <div class="qmodal__moto-fields">
+              <div class="qmodal__field">
+                <label class="qmodal__label">¿QUÉ MOTO TIENES? *</label>
+                <input type="text" class="qmodal__input" id="qmodalMotoName" placeholder="Ej: NMAX 155, Honda CB190R, Pulsar NS200...">
+              </div>
+              <div class="qmodal__field">
+                <label class="qmodal__label">¿QUÉ NECESITA? *</label>
+                <textarea class="qmodal__input qmodal__textarea" id="qmodalMotoNeeds" placeholder="Ej: Lavado completo, limpieza profunda, pulido..." rows="2"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="qmodal__divider"></div>
+        <div class="qmodal__addons-section">
+          <label class="qmodal__label">ADICIONALES</label>
+          <div class="qmodal__addons-list" id="qmodalAddonsList"></div>
+          <div class="qmodal__subtotal">
+            <span>SUBTOTAL ADICIONALES:</span>
+            <span id="qmodalSubtotalPrice">S/0</span>
+          </div>
+        </div>
+        <div class="qmodal__total-row" id="qmodalTotalRow">
+          <span>TOTAL:</span>
+          <span id="qmodalTotalPrice">S/0</span>
+        </div>
+        <div class="qmodal__divider"></div>
+        <div class="qmodal__field qmodal__field--map">
+          <label class="qmodal__label">UBICACIÓN / DIRECCIÓN DEL SERVICIO *</label>
+          <div class="qmodal__map-search">
+            <span class="qmodal__map-search-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </span>
+            <input type="text" class="qmodal__input qmodal__map-input" id="qmodalAddressSearch" placeholder="Buscar calle, dirección o lugar..." autocomplete="off">
+            <div class="qmodal__map-results" id="qmodalMapResults"></div>
+          </div>
+          <div class="qmodal__map-wrap" id="qmodalMapWrap">
+            <div class="qmodal__map" id="qmodalMap"></div>
+          </div>
+          <div class="qmodal__map-selected" id="qmodalMapSelected">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span id="qmodalMapSelectedText">Haz clic en el mapa o busca una dirección</span>
+          </div>
+          <input type="hidden" id="qmodalAddress" value="">
+          <input type="hidden" id="qmodalLat" value="">
+          <input type="hidden" id="qmodalLng" value="">
+          <div class="qmodal__coverage" id="qmodalCoverage">
+            <span class="qmodal__coverage-icon" id="qmodalCoverageIcon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <span class="qmodal__coverage-text" id="qmodalCoverageText">Selecciona una ubicación para verificar cobertura</span>
+          </div>
+        </div>
+        <div class="qmodal__field">
+          <label class="qmodal__label">NOMBRE *</label>
+          <input type="text" class="qmodal__input" id="qmodalName" placeholder="Tu nombre completo" autocomplete="name">
+        </div>
+        <div class="qmodal__field">
+          <label class="qmodal__label">FECHA *</label>
+          <input type="text" class="qmodal__input" id="qmodalDate" placeholder="dd/mm/yyyy" maxlength="10" inputmode="numeric" autocomplete="off">
+        </div>
+        <div class="qmodal__field">
+          <label class="qmodal__label">HORA *</label>
+          <div class="qmodal__time-grid" id="qmodalTimeGrid">
+            <button type="button" class="qmodal__time-btn" data-time="08:00 AM" data-hours="8">08:00</button>
+            <button type="button" class="qmodal__time-btn" data-time="09:00 AM" data-hours="9">09:00</button>
+            <button type="button" class="qmodal__time-btn" data-time="10:00 AM" data-hours="10">10:00</button>
+            <button type="button" class="qmodal__time-btn" data-time="11:00 AM" data-hours="11">11:00</button>
+            <button type="button" class="qmodal__time-btn" data-time="12:00 PM" data-hours="12">12:00</button>
+            <button type="button" class="qmodal__time-btn" data-time="02:00 PM" data-hours="14">14:00</button>
+            <button type="button" class="qmodal__time-btn" data-time="03:00 PM" data-hours="15">15:00</button>
+            <button type="button" class="qmodal__time-btn" data-time="04:00 PM" data-hours="16">16:00</button>
+            <button type="button" class="qmodal__time-btn" data-time="05:00 PM" data-hours="17">17:00</button>
+            <button type="button" class="qmodal__time-btn" data-time="06:00 PM" data-hours="18">18:00</button>
+            <button type="button" class="qmodal__time-btn" data-time="07:00 PM" data-hours="19">19:00</button>
+          </div>
+          <input type="hidden" id="qmodalTime" value="">
+        </div>
+        <div class="qmodal__field">
+          <label class="qmodal__label">OBSERVACIONES</label>
+          <textarea class="qmodal__input qmodal__textarea" id="qmodalNotes" placeholder="Color del auto, zona, detalles..." rows="2"></textarea>
+        </div>
+      </div>
+      <div class="qmodal__error" id="qmodalError"></div>
+      <p class="qmodal__note"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Nota: El tiempo estimado puede variar según el tipo de carro, sus dimensiones y las observaciones particulares que presente.</p>
+      <div class="qmodal__footer">
+        <button type="button" class="btn btn--outline qmodal__btn-close" id="quickReserveCloseBtn">CERRAR</button>
+        <button type="button" class="btn btn--primary qmodal__btn-confirm" id="quickReserveConfirm">CONFIRMAR RESERVA</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating RESERVA button -->
+  <button class="floating-reserve" id="floatingReserveBtn" type="button">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    <span>VER RESERVA</span>
+    <span class="floating-reserve__count" id="floatingReserveCount">0</span>
+  </button>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
